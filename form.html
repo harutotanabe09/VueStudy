@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>My Vue App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app" class="container">
+      <input type="text" id="newItem1" name="newItem1">
+      <input type="text" id="newItem2" name="newItem2">
+      <input type="text" id="newItem3" name="newItem3">
+      <input type="text" id="newItem4" name="newItem4">
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script>
+  // strart --- 
+  // inputを全部取得する
+  var data = {}
+  $('#app').find('input').each(function(){
+    data[$(this).attr('name')] = $(this).val();
+  });
+  console.log(data);
+  console.log(JSON.stringify(data));
+  // end  ---
+  </script>
+</body>
+</html>
